@@ -22,11 +22,11 @@ function renderCars(datacars) {
   feautures.innerHTML = "";
   datacars.forEach((car) => {
     feautures.innerHTML += `
-           <div class="car-card" data-aos="fade-up" data-aos-delay="200">
+           <a href="car-details.html?id=${car._id}" class="car-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="car-img">
                     <span class="badge">Available Now</span>
                     <img src="${car.image}"
-                        alt="BMW-5">
+                        alt="${car.brand} ${car.model}">
                     <div class="price">
                         <span class="amount">${car.pricePerDay}</span>
                         <span class="day">/ day</span>
@@ -34,7 +34,7 @@ function renderCars(datacars) {
                 </div>
                 <div class="car-infor">
                     <h3>${car.brand} ${car.model}</h3>
-                    <p>${car.category} ${car.year}</p>
+                    <p>${car.category} · ${car.year}</p>
                 </div>
                 <div class="car-info">
                     <div class="detail-items">
@@ -73,9 +73,10 @@ function renderCars(datacars) {
                         <span class="text">${car.location}</span>
                     </div>
                 </div>
-            </div>
+            </a>
     `;
   });
 }
+
 getData();
 // Gọi hàm chính
