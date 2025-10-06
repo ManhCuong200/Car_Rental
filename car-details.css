@@ -36,9 +36,9 @@
 .nav a {
   font-family: "Outfit", sans-serif;
   text-decoration: none;
-  color: inherit;
+  color: #6a7282;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .search {
@@ -73,11 +73,10 @@
 }
 
 .btn-list {
-  background: transparent;
   border: none;
   font-size: 16px;
   cursor: pointer;
-  color: #1e293b;
+  color: #6a7282;
 }
 
 .btn-login {
@@ -121,7 +120,6 @@
   font-size: 15px;
   font-weight: 400;
   transition: all 0.3s ease;
-  margin-bottom: 12px;
 }
 
 .back-link svg path {
@@ -143,7 +141,7 @@
 }
 
 .car-image img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 12px;
   display: block;
 }
@@ -268,8 +266,8 @@
 
 .booking-card h2 {
   font-family: "Outfit", sans-serif;
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
   color: #111827;
   margin: 0;
   line-height: 1;
@@ -350,13 +348,17 @@
   padding: 60px 10%;
   font-family: "Outfit", sans-serif;
   color: #374151;
+  margin-top: 100px;
 }
 
 .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 20px;
+  padding: 10px 20px 30px;
 }
 
 .footer-logo {
@@ -425,6 +427,8 @@
 
 .footer-bottom {
   border-top: 1px solid #c4c7d2;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -447,4 +451,150 @@
 
 .footer-links a:hover {
   color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .toggle button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .toggle button svg {
+    display: block !important;
+  }
+
+  .car-details-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+    gap: 32px;
+  }
+
+  .car-image {
+    width: 100%;
+    position: relative;
+  }
+
+  .car-image img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .back-link {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 14px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .back-link:hover {
+    background: rgba(37, 99, 235, 0.85);
+    color: #fff;
+  }
+
+  .car-information {
+    width: 100%;
+    text-align: left;
+  }
+
+  .car-information h1 {
+    font-size: 24px;
+  }
+
+  .car-information .year {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .attr-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+
+  .attr-item {
+    padding: 16px 8px;
+    font-size: 14px;
+  }
+
+  .booking-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+    border-radius: 12px;
+    position: static;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .booking-card h2 {
+    font-size: 24px;
+  }
+
+  .booking-card small {
+    font-size: 13px;
+  }
+
+  .booking-card input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .booking-card button {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+
+  .footer {
+    padding: 40px 5%;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-brand p,
+  .footer-column ul li,
+  .footer-column ul a {
+    font-size: 13px;
+  }
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
 }
